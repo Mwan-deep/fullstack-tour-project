@@ -9,9 +9,12 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/api/**") // Áp dụng cho mọi đường dẫn bắt đầu bằng /api/
-                .allowedOrigins("http://localhost:5173") // Chỉ cho phép Frontend ở cổng 5173 gọi
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Các HTTP Method được phép
+        registry.addMapping("/api/**")
+                .allowedOrigins(
+                        "http://localhost:5173", // Giữ lại để code ở nhà vẫn chạy
+                        "https://fullstack-tour-project.vercel.app" // TÊN MIỀN VERCEL CỦA BẠN (CỰC KỲ QUAN TRỌNG)
+                )
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
     }
