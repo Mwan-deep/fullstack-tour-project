@@ -37,6 +37,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/auth/**").permitAll() // Đăng ký/Đăng nhập luôn mở
 
                         // MỞ CHỌN LỌC:
+                        .requestMatchers("/api/health").permitAll() // <-- THÊM DÒNG NÀY VÀO ĐÂY
                         .requestMatchers(HttpMethod.GET, "/api/tours/**").permitAll() // Cho phép KHÁCH VÃNG LAI xem được danh sách
                         .requestMatchers(HttpMethod.POST, "/api/tours/**").authenticated() // BẮT BUỘC ĐĂNG NHẬP mới được THÊM Tour
 
