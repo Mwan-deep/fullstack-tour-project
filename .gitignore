@@ -1,0 +1,19 @@
+# === Cấu hình bỏ qua cho Frontend (React/Vite) ===
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.eslintcache
+
+# === Cấu hình bỏ qua cho Backend (Spring Boot/Java) ===
+backend/target/
+backend/.mvn/
+backend/mvnw
+backend/mvnw.cmd
+
+# === Cấu hình bỏ qua cho các file hệ thống và IDE (Môi trường code) ===
+.idea/
+.vscode/
+*.iml
+*.log
+.DS_Store
+Thumbs.db
